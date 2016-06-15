@@ -11,12 +11,8 @@ import UIKit
 
 class QuestionMasterViewController: UICollectionViewController  {
     
-    private var questionsDataSource = QuestionsDataSource()
     var question : Question?
     let detailViewControllerId = "MasterToDetail"
-    
-    
-    // Test Comment 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +34,8 @@ class QuestionMasterViewController: UICollectionViewController  {
     @IBAction func createQuestionSaveButtonTapped(segue: UIStoryboardSegue) {
         
         // Add question to collectionView
-        let indexPath = questionsDataSource.indexPathForNewQuestion()
-        collectionView?.insertItems(at: [indexPath as IndexPath])
+//        let indexPath = questionsDataSource.indexPathForNewQuestion()
+//        collectionView?.insertItems(at: [indexPath as IndexPath])
     }
     
     // MARK: Segue to QuestionDetail
@@ -60,24 +56,20 @@ class QuestionMasterViewController: UICollectionViewController  {
     
     // MARK: UICollectionViewDataSource
      override func numberOfSections(in collectionView: UICollectionView?) -> Int {
-        return questionsDataSource.numberOfSections
+        return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return questionsDataSource.count
+        return 12
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAt indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCell", for: indexPath as NSIndexPath as IndexPath) as! QuestionCell
-        if let question = questionsDataSource.questionForItemAtIndexPath(indexPath: indexPath as NSIndexPath) {
-            cell.question = question
-        }
+        
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAt indexPath: NSIndexPath) {
-        if let question = questionsDataSource.questionForItemAtIndexPath(indexPath: indexPath as NSIndexPath) {
-            performSegue(withIdentifier: detailViewControllerId, sender: question)
-        }
+        print("Cell Selected")
     }
 }

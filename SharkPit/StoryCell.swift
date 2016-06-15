@@ -13,7 +13,6 @@ class StoryCell: UICollectionViewCell {
     @IBOutlet weak var storyImageView: UIImageView!
     @IBOutlet weak var storyTitleLabel: UILabel!
     @IBOutlet weak var storyDescriptionLabel: UILabel!
-    @IBOutlet weak var imageViewHeightConstrant: NSLayoutConstraint!
     
     var story: Story? {
         didSet {

@@ -9,20 +9,7 @@
 import UIKit
 
 class Story {
-    
-    class func allStories() -> [Story] {
-        var stories = [Story]()
-        if let URL = Bundle.main().urlForResource("Story", withExtension: "plist") {
-            if let photosFromPlist = NSArray(contentsOf: URL) {
-                for dictionary in photosFromPlist {
-                    let story = Story(dictionary: dictionary as! NSDictionary)
-                    stories.append(story)
-                }
-            }
-        }
-        return stories
-    }
-    
+
     var storyTitle: String
     var story: String
     var image: UIImage
@@ -41,8 +28,16 @@ class Story {
         self.init(storyTitle: storyTitle!, story: story!, image: image!)
     }
     
-    func heightForComment(_ font: UIFont, width: CGFloat) -> CGFloat {
-        let rect = NSString(string: story).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
-        return ceil(rect.height)
+    class func allStories() -> [Story] {
+        var stories = [Story]()
+        if let URL = Bundle.main().urlForResource("Story", withExtension: "plist") {
+            if let photosFromPlist = NSArray(contentsOf: URL) {
+                for dictionary in photosFromPlist {
+                    let story = Story(dictionary: dictionary as! NSDictionary)
+                    stories.append(story)
+                }
+            }
+        }
+        return stories
     }
 }
