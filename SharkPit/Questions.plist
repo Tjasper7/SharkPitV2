@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>caption</key>
+		<string>Question 1</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>table1</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 2</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>barTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 3</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>detailedTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 4</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>detailedTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 5</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>diagramTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>4</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 6</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>diagramTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>5</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 6</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>detailedTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>6</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 7</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>diagramTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>7</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 8</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>barTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>8</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 9</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>detailedTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>9</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 10</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>blueTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>10</integer>
+	</dict>
+	<dict>
+		<key>caption</key>
+		<string>Question 11</string>
+		<key>description</key>
+		<string>Goes Here</string>
+		<key>imageName</key>
+		<string>blueTable</string>
+		<key>section</key>
+		<string>section</string>
+		<key>index</key>
+		<integer>11</integer>
+	</dict>
+</array>
+</plist>
