@@ -9,10 +9,6 @@
 		<string>Goes Here</string>
 		<key>imageName</key>
 		<string>table1</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -20,11 +16,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>barTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>1</integer>
+		<string>table1</string>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -32,11 +24,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>detailedTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>2</integer>
+		<string>table1</string>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -44,11 +32,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>detailedTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>3</integer>
+		<string>table1</string>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -56,11 +40,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>diagramTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>4</integer>
+		<string>table1</string>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -68,11 +48,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>diagramTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>5</integer>
+		<string>table2</string>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -80,11 +56,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>detailedTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>6</integer>
+		<string>table3</string>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -92,11 +64,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>diagramTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>7</integer>
+		<string>table2</string>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -104,11 +72,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>barTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>8</integer>
+		<string>table1</string>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -116,11 +80,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>detailedTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>9</integer>
+		<string>table3</string>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -128,11 +88,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>blueTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>10</integer>
+		<string>table1</string>
 	</dict>
 	<dict>
 		<key>caption</key>
@@ -140,11 +96,7 @@
 		<key>description</key>
 		<string>Goes Here</string>
 		<key>imageName</key>
-		<string>blueTable</string>
-		<key>section</key>
-		<string>section</string>
-		<key>index</key>
-		<integer>11</integer>
+		<string>table3</string>
 	</dict>
 </array>
 </plist>

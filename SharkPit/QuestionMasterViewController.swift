@@ -9,15 +9,13 @@
 
 import UIKit
 
-class QuestionMasterViewController: UICollectionViewController  {
+class QuestionMasterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
     
-    var question : Question?
-    let detailViewControllerId = "MasterToDetail"
-    
+    var questions = Question.allQuestions()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        layoutCellWidth()
     }
     
     //MARK: Actions
@@ -27,9 +25,6 @@ class QuestionMasterViewController: UICollectionViewController  {
     }
     
     //MARK: Segues from CreateQuestion 
-    @IBAction func createQuestionCancelButtonTapped(segue: UIStoryboardSegue) {
-        
-    }
     
     @IBAction func createQuestionSaveButtonTapped(segue: UIStoryboardSegue) {
         
@@ -38,38 +33,17 @@ class QuestionMasterViewController: UICollectionViewController  {
 //        collectionView?.insertItems(at: [indexPath as IndexPath])
     }
     
-    // MARK: Segue to QuestionDetail
     
-     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == detailViewControllerId {
-            let detailVC = segue.destinationViewController as! QuestionDetailViewController
-            detailVC.question = sender as? Question
-        }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return questions.count
     }
     
-    // Layout
-    func layoutCellWidth() {
-        let width = collectionView!.frame.width / 2
-        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: width, height: width)
-    }
-    
-    // MARK: UICollectionViewDataSource
-     override func numberOfSections(in collectionView: UICollectionView?) -> Int {
-        return 1
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
-    }
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAt indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCell", for: indexPath as NSIndexPath as IndexPath) as! QuestionCell
-        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAt indexPath: NSIndexPath) {
-        print("Cell Selected")
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Selected Question Item")
     }
 }

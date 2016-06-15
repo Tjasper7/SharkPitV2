@@ -24,8 +24,8 @@ class QuestionDetailViewController : UIViewController {
         
         if let question = question {
             navigationItem.title = "Question"
-            self.questionImageView?.image = UIImage(named: question.imageName)
-            self.questionTitle?.text = question.caption
+            self.questionTitle?.text = question.questionTitle
+            self.questionImageView?.image = question.image
         }
     }
     
