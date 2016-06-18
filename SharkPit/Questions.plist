@@ -7,6 +7,8 @@
 		<string>Question 1</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>one</string>
 		<key>imageName</key>
 		<string>table1</string>
 	</dict>
@@ -15,6 +17,8 @@
 		<string>Question 2</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>two</string>
 		<key>imageName</key>
 		<string>table1</string>
 	</dict>
@@ -23,6 +27,8 @@
 		<string>Question 3</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>three</string>
 		<key>imageName</key>
 		<string>table1</string>
 	</dict>
@@ -31,6 +37,8 @@
 		<string>Question 4</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>one</string>
 		<key>imageName</key>
 		<string>table1</string>
 	</dict>
@@ -39,6 +47,8 @@
 		<string>Question 5</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>one</string>
 		<key>imageName</key>
 		<string>table1</string>
 	</dict>
@@ -47,6 +57,8 @@
 		<string>Question 6</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>one</string>
 		<key>imageName</key>
 		<string>table2</string>
 	</dict>
@@ -55,6 +67,8 @@
 		<string>Question 6</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>one</string>
 		<key>imageName</key>
 		<string>table3</string>
 	</dict>
@@ -63,6 +77,8 @@
 		<string>Question 7</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>one</string>
 		<key>imageName</key>
 		<string>table2</string>
 	</dict>
@@ -71,6 +87,8 @@
 		<string>Question 8</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>one</string>
 		<key>imageName</key>
 		<string>table1</string>
 	</dict>
@@ -79,6 +97,8 @@
 		<string>Question 9</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>one</string>
 		<key>imageName</key>
 		<string>table3</string>
 	</dict>
@@ -87,6 +107,8 @@
 		<string>Question 10</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>one</string>
 		<key>imageName</key>
 		<string>table1</string>
 	</dict>
@@ -95,6 +117,8 @@
 		<string>Question 11</string>
 		<key>description</key>
 		<string>Goes Here</string>
+		<key>section</key>
+		<string>one</string>
 		<key>imageName</key>
 		<string>table3</string>
 	</dict>

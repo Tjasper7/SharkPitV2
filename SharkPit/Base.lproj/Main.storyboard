@@ -74,7 +74,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileCell" id="7Nw-af-7v6" customClass="ProfileCell" customModule="SharkPit" customModuleProvider="target">
-                                <frame key="frameInset" minX="11" minY="251" width="354" height="200"/>
+                                <frame key="frameInset" minX="10.5" minY="251" width="354" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="354" height="200"/>
@@ -307,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yT1-eW-MWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7510.1449275362329" y="-520.10869565217399"/>
+            <point key="canvasLocation" x="3966" y="-1084"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NIy-yv-Ggc">
@@ -325,7 +325,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQT-W4-4y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6697.1014492753629" y="-520.10869565217399"/>
+            <point key="canvasLocation" x="3102" y="-1628"/>
         </scene>
         <!--Table Layout View Controller-->
         <scene sceneID="mGd-dP-NLB">
@@ -489,7 +489,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="9176.8115942028999" y="-520.10869565217399"/>
+            <point key="canvasLocation" x="7483" y="-1084"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jSn-f6-QAA">
@@ -507,7 +507,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Gg-NL-V8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8272.463768115942" y="-520.10869565217399"/>
+            <point key="canvasLocation" x="5897" y="-1084"/>
         </scene>
         <!--Stories-->
         <scene sceneID="ADw-nl-Maf">
@@ -735,7 +735,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="10671.014492753624" y="-520.10869565217399"/>
+            <point key="canvasLocation" x="10462" y="-1084"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z2O-Eb-xFj">
@@ -753,7 +753,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2n-vx-18F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9859.4202898550739" y="-520.10869565217399"/>
+            <point key="canvasLocation" x="8916" y="-1084"/>
         </scene>
         <!--Question Detail View Controller-->
         <scene sceneID="CXO-q7-mep">
@@ -834,7 +834,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5416" y="-635"/>
+            <point key="canvasLocation" x="3102" y="-808"/>
         </scene>
         <!--Questions-->
         <scene sceneID="qMx-uC-Izf">
@@ -857,6 +857,9 @@
                                 <state key="normal" title="Create">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wn5-Ss-Z9u" kind="presentation" id="Qv5-tg-Wfo"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbh-S4-66S">
                                 <color key="backgroundColor" white="1" alpha="0.69717133620000005" colorSpace="calibratedWhite"/>
@@ -962,7 +965,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7l-sG-m5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2087" y="-491"/>
+            <point key="canvasLocation" x="2187" y="-808"/>
         </scene>
     </scenes>
     <resources>

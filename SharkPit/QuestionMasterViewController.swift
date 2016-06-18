@@ -11,8 +11,13 @@ import UIKit
 
 class QuestionMasterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
     
-    var questions = Question.allQuestions()
-
+    let dataSource = QuestionDataSource()
+    var question : Question?
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,16 +37,28 @@ class QuestionMasterViewController: UIViewController, UICollectionViewDelegate, 
 //        let indexPath = questionsDataSource.indexPathForNewQuestion()
 //        collectionView?.insertItems(at: [indexPath as IndexPath])
     }
-    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return questions.count
+        return dataSource.numberOfRowsInEachSection(index: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
+        
+        let questions: [Question] = dataSource.questionsInSection(index: indexPath.section)
+        let question = questions[indexPath.row]
+        
+        cell.questionTitleLabel.text = question.questionTitle
+        cell.questionLabel.text = question.description
+        cell.questionImageView.image = question.image
+        
         return cell
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selected Question Item")
