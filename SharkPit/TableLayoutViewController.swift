@@ -49,7 +49,7 @@ class TableLayoutViewController : UIViewController {
         }
     }
     
-    //MARK: Actions
+    // round the balls
     func roundedBalls() {
         
         self.oneBall.layer.cornerRadius = self.oneBall.frame.width / 2

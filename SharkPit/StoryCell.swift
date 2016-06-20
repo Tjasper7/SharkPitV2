@@ -17,9 +17,9 @@ class StoryCell: UICollectionViewCell {
     var story: Story? {
         didSet {
             if let story = story {
-                storyImageView.image = story.image
+//                storyImageView.image = story.storyImage
                 storyTitleLabel.text = story.storyTitle
-                storyDescriptionLabel.text = story.story
+                storyDescriptionLabel.text = story.storyDescription
             }
         }
     }

@@ -10,7 +10,9 @@ import UIKit
 import AVFoundation
 
 class StoriesMasterViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    var stories = Story.allStories()
+    
+//    var stories = Story.allStories()
+    var story: Story?
 
     @IBOutlet weak var storyCollectionView: UICollectionView!
     
@@ -23,12 +25,16 @@ class StoriesMasterViewController: UIViewController, UICollectionViewDataSource,
         storyCollectionView.backgroundColor = .clear()
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return stories.count
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCell", for: indexPath) as! StoryCell
+//        cell.storyImageView.image = story?.storyImage
+        cell.storyTitleLabel.text = story?.storyTitle
+        cell.storyDescriptionLabel.text = story?.storyDescription
         return cell
     }
     
