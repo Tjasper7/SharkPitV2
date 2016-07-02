@@ -37,6 +37,7 @@ class StoryDatabase: NSObject {
                 print("error Occured 👎🏼")
             } else {
                 print("Successful Copy 👍🏼")
+
             }
         }
     }

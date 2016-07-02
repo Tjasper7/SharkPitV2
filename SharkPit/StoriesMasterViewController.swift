@@ -12,7 +12,8 @@ import AVFoundation
 class StoriesMasterViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
 //    var stories = Story.allStories()
-    var story: Story?
+    var storyData: NSMutableArray!
+    var databaseManager: DatabaseManager?
 
     @IBOutlet weak var storyCollectionView: UICollectionView!
     
@@ -25,16 +26,26 @@ class StoriesMasterViewController: UIViewController, UICollectionViewDataSource,
         storyCollectionView.backgroundColor = .clear()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.getStoryData()
+    }
+    
+    func getStoryData() {
+        storyData = NSMutableArray()
+        storyData = DatabaseManager.getInstance().getAllStoryData()
+        storyCollectionView.reloadData()
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCell", for: indexPath) as! StoryCell
+        let story = storyData.object(at: (indexPath as NSIndexPath).row) as! Story
 //        cell.storyImageView.image = story?.storyImage
-        cell.storyTitleLabel.text = story?.storyTitle
-        cell.storyDescriptionLabel.text = story?.storyDescription
+        cell.storyTitleLabel.text = story.storyTitle
+        cell.storyDescriptionLabel.text = story.storyDescription
         return cell
     }
     

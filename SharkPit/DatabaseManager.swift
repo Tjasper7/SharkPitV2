@@ -10,6 +10,7 @@
 // TODO: Add Image into database
 
 import UIKit
+import MapKit
 
 let sharedInstance = DatabaseManager()
 

@@ -6,43 +6,50 @@
 //  Copyright © 2016 Tyler Jasper. All rights reserved.
 //
 
+
+// THREE CLASSES: Profile , ProfileInformation, ProfileCell 
+
 import UIKit
 
 class Profile {
     var userName: String
     var age: String
     var location: String
-    var skillLevel: String
     
-    class func allProfileCellsPlist() -> [Profile] {
-        var profiles = [Profile]()
-        if let URL = Bundle.main().urlForResource("Profile", withExtension: "plist") {
-            if let profilesFromPlist = NSArray(contentsOf: URL) {
-                for dictionary in profilesFromPlist {
-                    let profile = Profile(dictionary: dictionary as! NSDictionary)
-                    profiles.append(profile)
-                }
-            }
-        }
-        return profiles
+    init(userName: String, age: String, location: String) {
+        self.userName = userName
+        self.age = age
+        self.location = location
     }
     
-    init(userName: String, age: String, location: String, skillLevel: String) {
-        
-        self.userName   = userName
-        self.age        = age
-        self.location   = location
-        self.skillLevel = skillLevel
+}
+
+class ProfileInformation: Equatable {
+
+    let name: String
+    var profileInfo: [Profile]
+    
+    init(name: String, profileInfo: [Profile]) {
+        self.name = name
+        self.profileInfo = profileInfo
     }
     
-    convenience init(dictionary: NSDictionary) {
-        let userName    = dictionary["UserName"] as? String
-        let age         = dictionary["Age"] as? String
-        let location    = dictionary["Location"] as? String
-        let skillLevel  = dictionary["SkillLevel"] as? String
-        
-        self.init(userName: userName!, age: age!, location: location!, skillLevel: skillLevel!)
+    static func listProfileInformation() {
+        var profile = [Profile]()
+        profile.append(Profile(userName: "Tyler Jasper", age: "26", location: "Alabama"))
     }
+    
+}
+
+func ==(lhs: ProfileInformation, rhs: ProfileInformation) -> Bool {
+    var isEqual = false
+    if (lhs.name == rhs.name && lhs.profileInfo.count == rhs.profileInfo.count) {
+        isEqual = true
+    }
+    return isEqual
+}
+
+class ProfileCell: UITableViewCell {
     
 }
 

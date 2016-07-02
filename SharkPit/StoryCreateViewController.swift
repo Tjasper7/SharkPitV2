@@ -13,10 +13,12 @@ class StoryCreateViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     
-    var storyInfo: Story!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func buttonCancelClicked(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -26,7 +28,7 @@ class StoryCreateViewController: UIViewController {
             story.storyTitle = titleTextField.text!
             story.storyDescription = descriptionTextView.text
         let isInserted = DatabaseManager.getInstance().upateStoryData(story)
-        if isInserted == true {
+        if isInserted {
             print("Record INSERTED 👍🏼")
         } else {
             print("Record not inserted 😭")

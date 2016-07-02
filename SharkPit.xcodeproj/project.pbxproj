@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		661F32041D27600800939629 /* YourStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F32031D27600800939629 /* YourStoryViewController.swift */; };
 		662316511D05C338002D8445 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662316501D05C338002D8445 /* UIImage+Decompression.swift */; };
 		662DC5651D17CA0300F28C1E /* StoryCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662DC5641D17CA0300F28C1E /* StoryCreateViewController.swift */; };
 		664C70451D0C8CB50003C5DE /* ImageOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C70441D0C8CB50003C5DE /* ImageOptionsViewController.swift */; };
@@ -15,6 +16,8 @@
 		664C704B1D0C929E0003C5DE /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C704A1D0C929E0003C5DE /* UIWindow+Extension.swift */; };
 		664C704D1D0C99630003C5DE /* QuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C704C1D0C99630003C5DE /* QuestionDetailViewController.swift */; };
 		664C704F1D0CAF2C0003C5DE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 664C704E1D0CAF2C0003C5DE /* libsqlite3.tbd */; };
+		665E766A1D23956200F53DA3 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665E76681D23956200F53DA3 /* FBSDKCoreKit.framework */; };
+		665E766B1D23956200F53DA3 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665E76691D23956200F53DA3 /* FBSDKLoginKit.framework */; };
 		66694A811D0379D8003B8228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66694A801D0379D8003B8228 /* AppDelegate.swift */; };
 		66694A861D0379D8003B8228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66694A841D0379D8003B8228 /* Main.storyboard */; };
 		66694A8B1D0379D8003B8228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66694A891D0379D8003B8228 /* LaunchScreen.storyboard */; };
@@ -31,9 +34,7 @@
 		66BD2FEA1D067632008D5581 /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD2FE91D067632008D5581 /* StoryDetailViewController.swift */; };
 		66BD2FEC1D067B73008D5581 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BD2FEB1D067B73008D5581 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		66BD2FEE1D067C8A008D5581 /* PoolHallMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD2FED1D067C8A008D5581 /* PoolHallMainViewController.swift */; };
-		66BD2FF01D068CEC008D5581 /* ProfileMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD2FEF1D068CEC008D5581 /* ProfileMainViewController.swift */; };
-		66BD2FF21D068E06008D5581 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD2FF11D068E06008D5581 /* ProfileHeaderView.swift */; };
-		66BD2FF41D069192008D5581 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD2FF31D069192008D5581 /* ProfileCell.swift */; };
+		66BD2FF01D068CEC008D5581 /* ProfileMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD2FEF1D068CEC008D5581 /* ProfileMasterViewController.swift */; };
 		66BD2FF61D069519008D5581 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD2FF51D069519008D5581 /* Profile.swift */; };
 		66BD2FF81D0697FD008D5581 /* Profile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66BD2FF71D0697FD008D5581 /* Profile.plist */; };
 		66D089E51D11328600486290 /* QuestionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D089E41D11328600486290 /* QuestionDataSource.swift */; };
@@ -81,8 +82,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		661F32031D27600800939629 /* YourStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourStoryViewController.swift; sourceTree = "<group>"; };
 		662316501D05C338002D8445 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
-		662DC5631D17C21A00F28C1E /* SharkPitDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = SharkPitDB.db; sourceTree = "<group>"; };
 		662DC5641D17CA0300F28C1E /* StoryCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCreateViewController.swift; sourceTree = "<group>"; };
 		664C70441D0C8CB50003C5DE /* ImageOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOptionsViewController.swift; sourceTree = "<group>"; };
 		664C70461D0C8EFC0003C5DE /* TableLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableLayoutViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +92,9 @@
 		664C704C1D0C99630003C5DE /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
 		664C704E1D0CAF2C0003C5DE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		664C70501D0CB0060003C5DE /* SharkPit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SharkPit-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		6659D44D1D23A4940064D0FA /* FBIntegrationWithSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBIntegrationWithSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		665E76681D23956200F53DA3 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		665E76691D23956200F53DA3 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		66694A7D1D0379D8003B8228 /* SharkPit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharkPit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66694A801D0379D8003B8228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66694A851D0379D8003B8228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,12 +117,11 @@
 		66BD2FE91D067632008D5581 /* StoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
 		66BD2FEB1D067B73008D5581 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		66BD2FED1D067C8A008D5581 /* PoolHallMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolHallMainViewController.swift; sourceTree = "<group>"; };
-		66BD2FEF1D068CEC008D5581 /* ProfileMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMainViewController.swift; sourceTree = "<group>"; };
-		66BD2FF11D068E06008D5581 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
-		66BD2FF31D069192008D5581 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		66BD2FEF1D068CEC008D5581 /* ProfileMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMasterViewController.swift; sourceTree = "<group>"; };
 		66BD2FF51D069519008D5581 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		66BD2FF71D0697FD008D5581 /* Profile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Profile.plist; sourceTree = "<group>"; };
 		66D089E41D11328600486290 /* QuestionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDataSource.swift; sourceTree = "<group>"; };
+		66D2A1A21D1CC7C600966B40 /* SharkPitDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = SharkPitDB.db; sourceTree = "<group>"; };
 		66DDFB941D0F8A2C00653AC2 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		66DDFB961D0F8A4100653AC2 /* QuestionMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionMasterViewController.swift; sourceTree = "<group>"; };
 		66DDFB981D0F8A6A00653AC2 /* Questions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Questions.plist; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				664C704F1D0CAF2C0003C5DE /* libsqlite3.tbd in Frameworks */,
+				665E766A1D23956200F53DA3 /* FBSDKCoreKit.framework in Frameworks */,
+				665E766B1D23956200F53DA3 /* FBSDKLoginKit.framework in Frameworks */,
 				66BD2FEC1D067B73008D5581 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +181,7 @@
 		66694A741D0379D8003B8228 = {
 			isa = PBXGroup;
 			children = (
+				664C704E1D0CAF2C0003C5DE /* libsqlite3.tbd */,
 				66694A7F1D0379D8003B8228 /* SharkPit */,
 				66694A941D0379D8003B8228 /* SharkPitTests */,
 				66694A9F1D0379D8003B8228 /* SharkPitUITests */,
@@ -196,6 +202,7 @@
 		66694A7F1D0379D8003B8228 /* SharkPit */ = {
 			isa = PBXGroup;
 			children = (
+				66D2A1A21D1CC7C600966B40 /* SharkPitDB.db */,
 				662316541D05D225002D8445 /* Layouts */,
 				662316501D05C338002D8445 /* UIImage+Decompression.swift */,
 				664C704A1D0C929E0003C5DE /* UIWindow+Extension.swift */,
@@ -203,7 +210,9 @@
 				66BD2FCE1D0650D4008D5581 /* Model */,
 				66BD2FCF1D0650D7008D5581 /* Views */,
 				66694A841D0379D8003B8228 /* Main.storyboard */,
+				661F32031D27600800939629 /* YourStoryViewController.swift */,
 				664C70501D0CB0060003C5DE /* SharkPit-Bridging-Header.h */,
+				6659D44D1D23A4940064D0FA /* FBIntegrationWithSwift-Bridging-Header.h */,
 				66694A801D0379D8003B8228 /* AppDelegate.swift */,
 				66E1D3E51D17A3620082F45D /* Third Party */,
 				66BD2FDF1D065C34008D5581 /* ImagesAssets.xcassets */,
@@ -212,8 +221,8 @@
 				66DDFB981D0F8A6A00653AC2 /* Questions.plist */,
 				66BD2FDD1D065AD1008D5581 /* Story.plist */,
 				66694A8C1D0379D8003B8228 /* Info.plist */,
-				664C704E1D0CAF2C0003C5DE /* libsqlite3.tbd */,
-				662DC5631D17C21A00F28C1E /* SharkPitDB.db */,
+				665E76681D23956200F53DA3 /* FBSDKCoreKit.framework */,
+				665E76691D23956200F53DA3 /* FBSDKLoginKit.framework */,
 				66BD2FEB1D067B73008D5581 /* MapKit.framework */,
 			);
 			path = SharkPit;
@@ -254,9 +263,7 @@
 			children = (
 				66694AB01D037AB6003B8228 /* QuestionCell.swift */,
 				66BD2FE11D065F41008D5581 /* StoryCell.swift */,
-				66BD2FF31D069192008D5581 /* ProfileCell.swift */,
 				66BD2FE31D065FB3008D5581 /* RoundedCellCorners.swift */,
-				66BD2FF11D068E06008D5581 /* ProfileHeaderView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -306,7 +313,7 @@
 		66BD2FD41D06511C008D5581 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				66BD2FEF1D068CEC008D5581 /* ProfileMainViewController.swift */,
+				66BD2FEF1D068CEC008D5581 /* ProfileMasterViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -485,15 +492,15 @@
 				66D089E51D11328600486290 /* QuestionDataSource.swift in Sources */,
 				66DDFB971D0F8A4100653AC2 /* QuestionMasterViewController.swift in Sources */,
 				66BD2FF61D069519008D5581 /* Profile.swift in Sources */,
+				661F32041D27600800939629 /* YourStoryViewController.swift in Sources */,
 				66BD2FEA1D067632008D5581 /* StoryDetailViewController.swift in Sources */,
 				66694AB11D037AB6003B8228 /* QuestionCell.swift in Sources */,
 				66BD2FE41D065FB3008D5581 /* RoundedCellCorners.swift in Sources */,
-				66BD2FF01D068CEC008D5581 /* ProfileMainViewController.swift in Sources */,
+				66BD2FF01D068CEC008D5581 /* ProfileMasterViewController.swift in Sources */,
 				66DDFB951D0F8A2C00653AC2 /* Question.swift in Sources */,
 				66E1D3E91D17B0000082F45D /* DatabaseManager.swift in Sources */,
 				66E1D3DF1D17A3580082F45D /* FMDatabase.m in Sources */,
 				66BD2FDA1D0653A0008D5581 /* StoriesMasterViewController.swift in Sources */,
-				66BD2FF21D068E06008D5581 /* ProfileHeaderView.swift in Sources */,
 				664C70491D0C90E30003C5DE /* CreateQuestionViewController.swift in Sources */,
 				66E1D3E11D17A3580082F45D /* FMDatabasePool.m in Sources */,
 				66BD2FE21D065F41008D5581 /* StoryCell.swift in Sources */,
@@ -507,7 +514,6 @@
 				66BD2FEE1D067C8A008D5581 /* PoolHallMainViewController.swift in Sources */,
 				664C70471D0C8EFC0003C5DE /* TableLayoutViewController.swift in Sources */,
 				664C704D1D0C99630003C5DE /* QuestionDetailViewController.swift in Sources */,
-				66BD2FF41D069192008D5581 /* ProfileCell.swift in Sources */,
 				662316511D05C338002D8445 /* UIImage+Decompression.swift in Sources */,
 				66BD2FDC1D065409008D5581 /* Story.swift in Sources */,
 				66AB71501D075F3300DE9F6C /* ProfileLayout.swift in Sources */,
@@ -661,8 +667,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SharkPit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Jasper.SharkPit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -683,8 +691,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SharkPit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Jasper.SharkPit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
