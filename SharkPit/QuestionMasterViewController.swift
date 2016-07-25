@@ -11,8 +11,11 @@ import UIKit
 
 class QuestionMasterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
     
-    let dataSource = QuestionDataSource()
-    var question : Question?
+    var questions = [Question]()
+    var questionData: NSMutableArray!
+    var databaseManager: DatabaseManager?
+    
+    @IBOutlet var questionCollectionView: UICollectionView!
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -20,7 +23,21 @@ class QuestionMasterViewController: UIViewController, UICollectionViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getQuestionData()
+        questionCollectionView.backgroundColor = UIColor.clear()
+        questionCollectionView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
+    }
+    
+    //MARK: Helpers
+    
+    func getQuestionData() {
+        questionData = NSMutableArray()
+        questionData = DatabaseManager.getInstance().getAllQuestionData()
+        questionCollectionView.reloadData()
     }
     
     //MARK: Actions
@@ -29,38 +46,18 @@ class QuestionMasterViewController: UIViewController, UICollectionViewDelegate, 
             
     }
     
-    //MARK: Segues from CreateQuestion 
-    
-    @IBAction func createQuestionSaveButtonTapped(segue: UIStoryboardSegue) {
-        
-        // Add question to collectionView
-//        let indexPath = questionsDataSource.indexPathForNewQuestion()
-//        collectionView?.insertItems(at: [indexPath as IndexPath])
-    }
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.numberOfRowsInEachSection(index: section)
+        return questionData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-        
-        let questions: [Question] = dataSource.questionsInSection(index: indexPath.section)
-        let question = questions[indexPath.row]
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCell", for: indexPath as IndexPath) as! QuestionCell
+        let question = questionData.object(at: indexPath.row) as! Question
         cell.questionTitleLabel.text = question.questionTitle
-        cell.questionLabel.text = question.description
-        cell.questionImageView.image = question.image
-        
         return cell
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected Question Item")
+        print("Selected Question at \(indexPath)")
     }
 }

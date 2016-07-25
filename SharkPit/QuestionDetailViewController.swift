@@ -15,7 +15,7 @@ class QuestionDetailViewController : UIViewController {
     @IBOutlet weak var questionDescription: UITextView!
     @IBOutlet weak var imageTapView: UIView!
     
-    var question : Question?
+    var question: Question?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,9 @@ class QuestionDetailViewController : UIViewController {
     }
     
     // MARK: Actions 
+    func dismissFullscreenImage(sender: UITapGestureRecognizer) {
+        sender.view?.removeFromSuperview()
+    }
     
     // englarging image when tapped yeahhhh
     @IBAction func imageTapped(sender: UITapGestureRecognizer) {
@@ -42,12 +45,6 @@ class QuestionDetailViewController : UIViewController {
         newImageView.addGestureRecognizer(tap)
         self.view.addSubview(newImageView)
     }
-    
-    func dismissFullscreenImage(sender: UITapGestureRecognizer) {
-        sender.view?.removeFromSuperview()
-    }
-    
-    
     
     
 }

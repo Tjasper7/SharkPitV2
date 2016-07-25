@@ -6,6 +6,8 @@
 //  Copyright © 2016 Tyler Jasper. All rights reserved.
 //
 
+//TODO: Since updating to xCode 8 and swift 3 this logic is no longer working. Update for here and for profile page 
+
 import UIKit
 
 class ImageOptionsViewController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {

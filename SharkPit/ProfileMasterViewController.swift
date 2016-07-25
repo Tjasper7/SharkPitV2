@@ -9,57 +9,103 @@
 import UIKit
 import FBSDKLoginKit
 
-class ProfileMasterViewController: UIViewController, FBSDKLoginButtonDelegate, UITableViewDelegate, UITableViewDataSource  {
+class ProfileMasterViewController: UIViewController, FBSDKLoginButtonDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate , EditViewControllerDelegate {
 
-
+//MARK: Outlets
+    
     @IBOutlet var fbLoginButton: FBSDKLoginButton!
-    
-    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet var yourStoryButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
-
-    @IBOutlet var profileTableView: UITableView!
-    
-    var profileItems : [String] = ["Tyler", "26", "Alabama"]
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var ageLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureFace()
+        yourStoryButton.layer.cornerRadius = 6
+        if (FBSDKAccessToken.current() != nil)
+        {
+            // User is already logged in, do work such as go to next view controller.
+        }
+        else
+        {
+            fbLoginButton.readPermissions = ["public_profile", "email", "user_friends"]
+            fbLoginButton.delegate = self
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "editSegue" {
+            let editViewController = segue.destinationViewController as! EditProfileViewController
+            editViewController.userName = nameLabel.text
+            editViewController.age = ageLabel.text
+            editViewController.location = locationLabel.text
+            editViewController.editDelegate = self
+        }
+    }
+            
+    func setUserInformation(newUserName: String, newAge: String, newLocation: String) {
+        nameLabel.text = newUserName
+        ageLabel.text =  newAge
+        locationLabel.text = newLocation
+    }
+    
+//MARK: Image Picker
+    
+    @IBAction func selectPhotoFromCameraRoll(_ sender: UITapGestureRecognizer) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+        }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        profileImage.image = selectedImage
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 
-    func configureFace() {
-        fbLoginButton.delegate = self
-        fbLoginButton.readPermissions = ["public_profile" , "email", "user_friends"]
-    }
+    
+//MARK: Facebook
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large)"]).start(completionHandler: { (connection, result, error) -> Void in
-            let firstName: String = result?.objectFor("first_name") as! String
-            let lastName: String = result?.objectFor("last_name") as! String
-            let pictureUrl = result?.objectFor("picture")?.objectFor("data")?.objectFor("url") as! String
-            self.userNameLabel.text = "Welcome, \(firstName) \(lastName)"
-            self.profileImage.image = UIImage(data: NSData(contentsOf: NSURL(string: pictureUrl)! as URL)! as Data)
-        })
+        print("User Logged In")
+        if error != nil {
+            print(error)
+        } else if result.isCancelled{
+            // Handle canceling stuff
+        } else {
+            if result.grantedPermissions.contains("email") {
+                // Do work
+            }
+        }
     }
-
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-
+    
+    }
+    
+    func returnUserData() {
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+        graphRequest.start( completionHandler: { (connection, result, error) -> Void in
+            if error != nil {
+                
+            } else {
+                print("fetched user: \(result)")
+                let userName: String = result?.value(forKey: "name") as! String
+                print("User Name is: \(userName)")
+                let userEmail: String = result?.value(forKey: "email") as! String
+                print("User Email is: \(userEmail)")
+                
+            }
+        })
     }
     
     
-    //MARK: TableView
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return profileItems.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell")! as UITableViewCell
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You selected Cell \(indexPath.row)")
-    }
     
 }
 

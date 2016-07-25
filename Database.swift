@@ -1,21 +1,21 @@
 //
-//  StoryDatabase.swift
+//  Database.swift
 //  SharkPit
 //
-//  Created by Tyler Jasper on 6/19/16.
+//  Created by Tyler Jasper on 7/11/16.
 //  Copyright © 2016 Tyler Jasper. All rights reserved.
 //
 
 import Foundation
-import UIKit
 
-class StoryDatabase: NSObject {
-    
+class Database: NSObject {
+
     class func getPath(_ fileName: String) -> String {
         
         let documentsURL = FileManager.default().urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
         let fileURL = try! documentsURL.appendingPathComponent(fileName)
         
+        print("Database path 🎯🎯🎯 \(fileURL.path)")
         return fileURL.path!
     }
     
@@ -37,7 +37,6 @@ class StoryDatabase: NSObject {
                 print("error Occured 👎🏼")
             } else {
                 print("Successful Copy 👍🏼")
-
             }
         }
     }
@@ -46,9 +45,8 @@ class StoryDatabase: NSObject {
         let alert: UIAlertView = UIAlertView()
         alert.message = strBody as String
         alert.title = strTitle as String
-        alert.delegate = delegate
+        alert.delegate = self
         alert.addButton(withTitle: "Ok")
         alert.show()
     }
-    
 }

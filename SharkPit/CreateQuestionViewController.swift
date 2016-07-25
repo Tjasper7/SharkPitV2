@@ -12,16 +12,17 @@ class CreateQuestionViewController : UIViewController, UIImagePickerControllerDe
     
     @IBOutlet weak var imageView : UIImageView!
     @IBOutlet weak var titleTextField : UITextField!
-    @IBOutlet weak var descriptionTextView : UITextView?
+    @IBOutlet weak var descriptionTextView : UITextView!
     
     var newTableImage : UIImage?
     let imagePicker = UIImagePickerController()
+
+    var question: Question?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.titleTextField.delegate = self
         self.imageView.image = newTableImage
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +42,17 @@ class CreateQuestionViewController : UIViewController, UIImagePickerControllerDe
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func saveButtonPressed(_ sender: AnyObject) {
+        let question: Question = Question()
+        question.questionTitle = titleTextField.text!
+        question.description = descriptionTextView.text
+        let isInserted = DatabaseManager.getInstance().addQuestionData(question)
+        if isInserted == true {
+            Database.invokeAlertMethod("Success", strBody: "Question was created", delegate: nil)
+        } else {
+            Database.invokeAlertMethod("Failure", strBody: "Question was not created. Try again", delegate: nil)
+        }
+    }
     @IBAction func tappedImage(_ sender: UITapGestureRecognizer) {
     
         let newImageView = UIImageView(image: imageView.image)

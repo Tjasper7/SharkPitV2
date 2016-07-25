@@ -9,11 +9,12 @@
 import UIKit
 import AVFoundation
 
-class StoriesMasterViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class StoriesMasterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-//    var stories = Story.allStories()
+    var stories = [Story]()
     var storyData: NSMutableArray!
     var databaseManager: DatabaseManager?
+    var refreshControl: UIRefreshControl = UIRefreshControl()
 
     @IBOutlet weak var storyCollectionView: UICollectionView!
     
@@ -23,11 +24,18 @@ class StoriesMasterViewController: UIViewController, UICollectionViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getStoryData()
+        refreshControl.tintColor = UIColor.white()
+        refreshControl.addTarget(self, action: #selector(StoriesMasterViewController.refreshControlAction), for: .valueChanged)
+        self.storyCollectionView.addSubview(refreshControl)
         storyCollectionView.backgroundColor = .clear()
+        if storyData == 0 {
+            noStoriesLabel()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.getStoryData()
+//        self.getStoryData()
     }
     
     func getStoryData() {
@@ -36,16 +44,28 @@ class StoriesMasterViewController: UIViewController, UICollectionViewDataSource,
         storyCollectionView.reloadData()
     }
     
+    func noStoriesLabel() {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: 160, y: 286)
+        label.textAlignment = NSTextAlignment.center
+        label.text = "No Stories Yet"
+        self.view.addSubview(label)
+    }
+    
+    func refreshControlAction() {
+        self.getStoryData()
+        refreshControl.endRefreshing()
+    }
+ 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return storyData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCell", for: indexPath) as! StoryCell
         let story = storyData.object(at: (indexPath as NSIndexPath).row) as! Story
-//        cell.storyImageView.image = story?.storyImage
         cell.storyTitleLabel.text = story.storyTitle
-        cell.storyDescriptionLabel.text = story.storyDescription
+//        cell.storyDescriptionLabel.text = story.storyDescription
         return cell
     }
     

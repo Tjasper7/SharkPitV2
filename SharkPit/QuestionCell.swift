@@ -17,7 +17,6 @@ class QuestionCell: UICollectionViewCell {
     var question: Question? {
         didSet {
             if let question = question {
-                questionImageView.image = question.image
                 questionTitleLabel.text = question.questionTitle
                 questionLabel.text = question.description
             }
