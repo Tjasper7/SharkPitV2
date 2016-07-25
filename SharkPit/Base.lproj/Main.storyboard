@@ -403,7 +403,7 @@
                                         <frame key="frameInset" minY="28" width="343" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qKr-zh-92m" id="FiU-jW-ERL">
-                                            <frame key="frameInset" width="310" height="88"/>
+                                            <frame key="frameInset" width="310" height="88.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pattern" translatesAutoresizingMaskIntoConstraints="NO" id="2TM-Ll-ERA">
@@ -570,9 +570,16 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11836662,width=178,height=178" translatesAutoresizingMaskIntoConstraints="NO" id="omI-nX-Qbx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="15g-Cd-ObV"/>
+                                    <constraint firstAttribute="width" constant="122" id="bc1-nW-mcg"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="0.64927262929999996" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="omI-nX-Qbx" secondAttribute="trailing" constant="111" id="0Gf-BJ-agg"/>
                             <constraint firstItem="2t8-iD-2BE" firstAttribute="leading" secondItem="EeP-Iz-H8X" secondAttribute="leading" id="3HX-41-JJz"/>
                             <constraint firstItem="iv3-1g-QGq" firstAttribute="leading" secondItem="LcD-KQ-b7V" secondAttribute="trailing" constant="8" id="4CW-wn-Ikq"/>
                             <constraint firstItem="2t8-iD-2BE" firstAttribute="top" secondItem="LcD-KQ-b7V" secondAttribute="bottom" constant="8" symbolic="YES" id="4gZ-Xj-bdr"/>
@@ -580,8 +587,11 @@
                             <constraint firstItem="2t8-iD-2BE" firstAttribute="trailing" secondItem="EeP-Iz-H8X" secondAttribute="trailing" id="94p-dR-8fk"/>
                             <constraint firstItem="Xgu-hq-FdH" firstAttribute="top" secondItem="Gqe-bf-gGd" secondAttribute="bottom" constant="97" id="Bmt-j3-s9w"/>
                             <constraint firstItem="iv3-1g-QGq" firstAttribute="width" secondItem="LcD-KQ-b7V" secondAttribute="width" constant="2" id="XPX-Nz-D2f"/>
+                            <constraint firstItem="omI-nX-Qbx" firstAttribute="top" secondItem="2t8-iD-2BE" secondAttribute="bottom" constant="28" id="ag8-5I-Tu5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EeP-Iz-H8X" secondAttribute="trailing" id="beg-vL-Lzg"/>
+                            <constraint firstItem="omI-nX-Qbx" firstAttribute="leading" secondItem="oC6-mR-CUd" secondAttribute="leadingMargin" constant="110" id="cZo-Yd-7OL"/>
                             <constraint firstAttribute="leadingMargin" secondItem="EeP-Iz-H8X" secondAttribute="leading" id="ckV-W5-qyH"/>
+                            <constraint firstItem="Gqe-bf-gGd" firstAttribute="top" secondItem="omI-nX-Qbx" secondAttribute="bottom" constant="26" id="fG3-8M-rpP"/>
                             <constraint firstItem="LcD-KQ-b7V" firstAttribute="bottom" secondItem="iv3-1g-QGq" secondAttribute="bottom" id="hgB-ZP-8Lv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iv3-1g-QGq" secondAttribute="trailing" id="kNp-XG-4ba"/>
                             <constraint firstItem="Gqe-bf-gGd" firstAttribute="top" secondItem="EeP-Iz-H8X" secondAttribute="bottom" constant="-88" id="ndJ-1V-cYd"/>
@@ -606,7 +616,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yT1-eW-MWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3966" y="-1084"/>
+            <point key="canvasLocation" x="3965.5999999999999" y="-1084.4077961019491"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NIy-yv-Ggc">
@@ -859,7 +869,8 @@
                                                         <constraint firstAttribute="height" constant="180" id="lFs-Vf-60O"/>
                                                     </constraints>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yk9-0f-dpE" customClass="GradientView" customModule="SharkPit" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yk9-0f-dpE" customClass="GradientView" customModule="SharkPit" customModuleProvider="target">
+                                                    <frame key="frameInset" minY="114" height="64"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNB-S8-fm1">
                                                             <constraints>
@@ -1474,6 +1485,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="11836662,width=178,height=178" width="178" height="178"/>
         <image name="pattern" width="640" height="960"/>
         <image name="poolHallicon" width="25" height="25"/>
         <image name="profileIcon" width="25" height="25"/>
