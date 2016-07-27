@@ -52,8 +52,8 @@ class QuestionMasterViewController: UIViewController, UICollectionViewDelegate, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCell", for: indexPath as IndexPath) as! QuestionCell
-        let question = questionData.object(at: indexPath.row) as! Question
-        cell.questionTitleLabel.text = question.questionTitle
+//        let question = questionData.object(at: indexPath.row) as! Question
+//        cell.questionTitleLabel.text = question.questionTitle
         return cell
     }
     
