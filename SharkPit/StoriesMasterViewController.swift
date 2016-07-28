@@ -64,7 +64,7 @@ class StoriesMasterViewController: UIViewController, UICollectionViewDelegate, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCell", for: indexPath) as! StoryCell
         let story = storyData.object(at: (indexPath as NSIndexPath).row) as! Story
-        cell.storyTitleLabel.text = story.storyTitle
+//        cell.storyTitleLabel.text = story.storyTitle
 //        cell.storyDescriptionLabel.text = story.storyDescription
         return cell
     }
