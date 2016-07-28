@@ -403,7 +403,7 @@
                                         <frame key="frameInset" minY="28" width="343" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qKr-zh-92m" id="FiU-jW-ERL">
-                                            <frame key="frameInset" width="310" height="88.5"/>
+                                            <frame key="frameInset" width="310" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pattern" translatesAutoresizingMaskIntoConstraints="NO" id="2TM-Ll-ERA">
@@ -869,8 +869,7 @@
                                                         <constraint firstAttribute="height" constant="180" id="lFs-Vf-60O"/>
                                                     </constraints>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yk9-0f-dpE" customClass="GradientView" customModule="SharkPit" customModuleProvider="target">
-                                                    <frame key="frameInset" minY="114" height="64"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yk9-0f-dpE" customClass="GradientView" customModule="SharkPit" customModuleProvider="target">
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNB-S8-fm1">
                                                             <constraints>
